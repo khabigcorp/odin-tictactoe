@@ -1,0 +1,20 @@
+
+[1mFrom:[0m /home/shizukalinux/repos/odin-tictactoe/tic-tac-toe.rb:45 Game#start:
+
+    [1;34m41[0m: [32mdef[0m [1;34mstart[0m
+    [1;34m42[0m:   @player1_name = gets.chomp
+    [1;34m43[0m:   @player2_name = gets.chomp
+    [1;34m44[0m:   binding.pry
+ => [1;34m45[0m:   [32munless[0m @board.has_winner? [32mor[0m !@board.can_be_won?
+    [1;34m46[0m:     current_player = @turn_count.odd? ? @player1_name : @player2_name
+    [1;34m47[0m:     current_character = @turn_count.odd? ? [31m[1;31m'[0m[31mO[1;31m'[0m[31m[0m : [31m[1;31m'[0m[31mX[1;31m'[0m[31m[0m
+    [1;34m48[0m:     puts [31m[1;31m"[0m[31mWhere will you place your #{current_character}[0m[31m, #{current_player}[0m[31m?[1;31m"[0m[31m[0m
+    [1;34m49[0m:     position = gets.chomp.to_i
+    [1;34m50[0m:     @board.play(position, current_character)
+    [1;34m51[0m:     @board.show_board
+    [1;34m52[0m:     @turn_count += [1;34m1[0m
+    [1;34m53[0m:   [32mend[0m
+    [1;34m54[0m: 
+    [1;34m55[0m:   puts [31m[1;31m"[0m[31m#{current_player}[0m[31m has won![1;31m"[0m[31m[0m
+    [1;34m56[0m: [32mend[0m
+
