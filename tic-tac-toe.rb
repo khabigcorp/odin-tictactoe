@@ -15,7 +15,11 @@ class Board
   end
 
   def show_board
-    puts "#{@board_squares[0]}|#{@board_squares[1]}|#{@board_squares[2]}\n" + "-----\n" + "#{@board_squares[3]}|#{@board_squares[4]}|#{@board_squares[5]}\n" + "-----\n" + "#{@board_squares[6]}|#{@board_squares[7]}|#{@board_squares[8]}\n"
+    puts "#{@board_squares[0]}|#{@board_squares[1]}|#{@board_squares[2]}"
+    puts '-----'
+    puts "#{@board_squares[3]}|#{@board_squares[4]}|#{@board_squares[5]}"
+    puts '-----'
+    puts "#{@board_squares[6]}|#{@board_squares[7]}|#{@board_squares[8]}"
   end
 
   def play(position, character)
@@ -61,7 +65,8 @@ class Game
       puts
     end
 
-    puts "#{current_player} has won!"
+    game_end_message = @board.has_winner? ? "#{current_player} has won!" : "It's a draw.."
+    puts game_end_message
   end
 end
 
